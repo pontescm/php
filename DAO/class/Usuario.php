@@ -137,7 +137,7 @@ class Usuario {
 		$parametros = array(':LOGIN'=>$login,':PASSWORD'=>$password,':ID'=>$this->getIdusuario());
 		//var_dump($parametros);
 		$sql = new Sql();
-		//$sql->query("UPDATE tb_usuarios set deslogin = :LOGIN, dessenha = :PASSWORD  where idusuario = :ID",$parametros);
+		$sql->query("UPDATE tb_usuarios set deslogin = :LOGIN, dessenha = :PASSWORD  where idusuario = :ID",$parametros);
 		//var_dump($sql);
 		//$parametros = array(':LOGIN'=>$login,':PASSWORD'=>$password,':ID'=>$this->getIdusuario());
 		/*$sql->query("UPDATE tb_usuarios set deslogin = :LOGIN, dessenha = :PASSWORD where idusuario = :ID",array(
@@ -150,7 +150,7 @@ class Usuario {
 //		echo "depois deslogin:".$this->getDeslogin()."<br>";
 //		echo "depois dessenha:".$this->getDessenha()."<br><br>";
 		
-		$sql->query("CALL sp_usuarios_update(:LOGIN,:PASSWORD, :ID)",$parametros);
+		//$sql->query("CALL sp_usuarios_update(:LOGIN,:PASSWORD, :ID)",$parametros);
 		
 
 		/*if (count($results) > 0){	
